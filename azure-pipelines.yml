@@ -8,7 +8,7 @@ variables:
 
 stages:
 - stage: 'Build'
-displayName: 'Build and push'
+  displayName: 'Build and push'
   jobs:  
   - job: 'Build'
     displayName: 'Build job'
@@ -26,7 +26,7 @@ displayName: 'Build and push'
         tags: |
           $(tag)
 - stage: 'Deploy'
-displayName: 'Deploy the container'
+  displayName: 'Deploy the container'
   dependsOn: Build
   jobs:
   - job: 'Deploy'
